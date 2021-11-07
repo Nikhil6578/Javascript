@@ -23,20 +23,27 @@ console.log("Value of w is",w);
 var value =23;
 function aaa(){
     let ddd=34; // ye function k bhar print nahi hoga
-    var dd=34; // ye function k bhar print nahi hoga (ye block level hi kaam in function)
-    value=112;  // iski value update nahi hogi function k under
+    var dd=34; // ye function k bhar print nahi hoga (ye block level hi kaam kre ga in function)
+    value=112;  // var ki  value update nahi hogi function k under
 }
 // console.log("Value of ddd is",ddd);
 console.log(value);
 
+for(let i=0; i<8; i++){
+    var m=9; // ye loop k bhar bhi print hoga (kykoi loop m global scope ki tarah hi kaam kre ga)
+    let h=8; // ye loop k bhar bhi print nahi hoga
+}
+console.log( "value of m is",m)
+// console.log( "value of h is",h)
+
 //constant
 const finalvalue =100;
-//finalvalue=12;  // const ki value update nahi hogi na hi override hogi 
+//finalvalue=12;  // const ki value update nahi hogi na hi re-declare hogi 
 console.log(finalvalue);
 
 // let,var
 var f=4;
-var f =5; // var apni value ko updation dono kr skta or re -declaration kr skte h
+var f =5; // var apni value ko updation  kr skta or re -declaration kr skte h
 f=10;
 console.log(f);
 
